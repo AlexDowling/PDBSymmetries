@@ -89,12 +89,25 @@ def oligomeric_count(f):
             if len(split)>1:
                 return int(split[-1])
 
-def protein_data_frame(filenames):
+def protein_data_frame(source_dir, target=None):
+
+    location = os.path.join(source_dir, '*.cif')
+    filenames = glob.glob(location)
+
     all_atom_counts = {}
     all_acid_counts = {}
     all_bond_counts = {}
     index = []
+    n = 0
     for f in filenames:
+        n = n+1
+        txt = (("\rProcessing protein {current} of {total}." 
+                + "   {percent}% complete.")
+                .format(current = n, total = len(filenames), 
+                        percent = math.floor(n/len(filenames)*100)))
+        sys.stdout.write(txt)
+        sys.stdout.flush()
+        
         all_atom_counts.update({f : atom_counts(f)})
         all_acid_counts.update({f : acid_counts(f)})
         all_bond_counts.update({f : bond_counts(f)})
@@ -119,6 +132,9 @@ def protein_data_frame(filenames):
     with open("symmetry-lists/C2_list.pkl", "rb") as file:
         symmetry_list = pickle.load(file)
     data.update({"SYMMETRY" : [int(f[-8:-4].upper()+'-1' in symmetry_list) for f in filenames]})
+
+    if target is not None:
+        data.to_csv(target)
     
     return pd.DataFrame(data, index=index)
         
