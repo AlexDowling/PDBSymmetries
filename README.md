@@ -87,7 +87,7 @@ Some of the features we analyzed, such as the positions of atoms in the proteins
 However, coarser features like oligomeric count still proved effective in identifying C2 symmetry. The 90.41% accuracy boasted by the gradient boosted decision tree model proves its value to biochemists, pharmaceutical scientists, and applied mathematicians.
 
 The PDB contains many more valuable features we did not exploit. This is not due to our estimation of their worth, but to a lack of subject knowledge. We are confident that introducing more of these chemical features would improve the models we have provided.
-In addition, one could employ more advanced techniques (like those from topological data analysis) to minimize computational complexity in measuring spatial information. We also believe this to be a promising direction.
+In addition, one could employ more advanced techniques (like those from topological data analysis or point cloud registration) to minimize computational complexity in measuring spatial information. We also believe this to be a promising direction.
 
 ## Description of Repository
 ```bash
