@@ -72,7 +72,7 @@ We then used the software [XGBoost](https://xgboost.readthedocs.io/en/stable/) t
 |Model|Train accuracy|Test accuracy|
 |---|:---:|:---:|
 |Baseline (Mode)| 75.92%| 76.15%|
-|XGBoost| 99.97%| 90.44%|
+|XGBoost| 99.97%| 90.63%|
 |XGBoost without OC| 99.82%| 77.73%|
 
 The gradient boosted decision tree model consistently performed 12-15 percentage points better than the baseline. Performing a feature importance analysis on the XGBoost model revealed that oligomeric count (number of repeated subunits in the protein) was the dominant feature in predictions:
@@ -94,7 +94,7 @@ The molecular structure of proteins is extremely complicated, with intricate che
 
 Some of the features we analyzed, such as the positions of atoms in the proteins, our methods were not able to incorporate into a compelling model without encountering issues with computational complexity.
 
-However, coarser features like oligomeric count still proved effective in identifying C2 symmetry. The 90.41% accuracy boasted by the gradient boosted decision tree model proves its value to biochemists, pharmaceutical scientists, and applied mathematicians.
+However, coarser features like oligomeric count still proved effective in identifying C2 symmetry. The 90.63% accuracy boasted by the gradient boosted decision tree model proves its value to biochemists, pharmaceutical scientists, and applied mathematicians.
 
 The PDB contains many more valuable features we did not exploit. This is not due to our estimation of their worth, but to a lack of subject knowledge. We are confident that introducing more of these chemical features would improve the models we have provided.
 In addition, one could employ more advanced techniques (like those from topological data analysis or point cloud registration) to minimize computational complexity in measuring spatial information. We also believe this to be a promising direction.
