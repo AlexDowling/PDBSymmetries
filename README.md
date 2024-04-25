@@ -10,7 +10,7 @@
 ## Introduction
 Proteins consist of a sequence of amino acids assembled into a linear chain. To function, it must be realized into a three dimensional structure, which typically exhibits some form of symmetry between identical or similar subunits. Identifying the symmetries of a protein structure has proved useful in understanding the function of the protein. 
 
-We wish to identify if a protein has a certain symmetry (as a first pass, C2 cyclic symmetry). This information is useful to:
+We wish to identify if a protein has a certain symmetry (for this project, we restrict our attention to C2 cyclic symmetry). This information is useful to:
 - Pharmaceutical scientists and biochemists are interested in determining the function of proteins.
 - Biochemists often explore how subunits of these proteins can fit together.
 - Applied mathematicians have an interest in how and which group structures can appear in biological processes.
