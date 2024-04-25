@@ -57,7 +57,17 @@ There are two crucial flaws with this model.
 1. Computational complexity: each protein's point cloud may contain thousands of elements, so measuring their distance with the Hausdorff metric is computationally expensive and immune to the standard optimization techniques.
 2. High dimensionality: since the size and shape of point clouds arising from proteins can vary dramatically, the "space of proteins" is extremely high dimensional. To get a KNN model to run effectively, one would need to sample many more proteins to flesh out clusters in this space.
 
-We used the software [XGBoost](https://xgboost.readthedocs.io/en/stable/) to generate a gradient boosted decision tree model for the tabular data. This contained 229 features (described in the data collection section) on roughly 5,000 proteins. The performance of the resultant model is shown below.
+Shifting our attention to the tabular data, we tried several regression based models. This included linear regression on the top three PCA components, linear regression on components with high correlation to PCA coordinates, and regression trees.
+
+|Model|Train accuracy|Test accuracy|
+|---|:---:|:---:|
+|Baseline (Mode)| 75.92%| 76.15%|
+|Linear regression after PCA| 76.35%| 76.17%|
+|Linear regression on cor. components| 76.35%| 76.17%|
+|Regression tree| 87.91%| 87.97%|
+|Regression tree without OC| 76.35%| 76.17%|
+
+We then used the software [XGBoost](https://xgboost.readthedocs.io/en/stable/) to generate a gradient boosted decision tree model for the tabular data. This contained 229 features (described in the data collection section) on roughly 5,000 proteins. The performance of the resultant model is shown below.
 
 |Model|Train accuracy|Test accuracy|
 |---|:---:|:---:|
