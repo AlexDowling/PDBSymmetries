@@ -39,7 +39,7 @@ We restricted ourselves to chemical and geometric features to provide for our mo
 
 There can be over 10,000 atoms in a particular protein, and this total can vary dramatically. There are also a variety of types for each atom and amino acid.
 We extracted two data sets from this:
-- a point cloud storing the positions of all atoms in space (regardless of type),
+- point clouds (centered at 0 with farthest point scaled and rotated to (1, 0, 0)) storing the positions of all atoms in space (regardless of type),
 - tabular data containing the number of atoms of each type, number of bonds of each type, number of amino acids of each type, and oligomeric count.
 
 The code for the point cloud formatting is in src/ProteinPointCloud.py, and the code for the tabular data formatting is in src/DataFormatting.py.
