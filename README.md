@@ -25,9 +25,9 @@ Each protein in the data bank has an associated PDB file which stores thousands 
 - names of scientists who discovered the protein,
 - equipment used to perform the crystallography,
 - number of repeated subunits in the protein,
-- precise positions of atoms in the protein and their types
-- bonds between atoms in the protein and their types
-- amino acids and their sequencing
+- precise positions of atoms in the protein and their types,
+- bonds between atoms in the protein and their types,
+- amino acids and their sequencing.
 
 In addition, the PDB offers a [Python search API](https://search.rcsb.org/#search-api). This allows us to search for proteins which exhibit global symmetry and for those which exhibit cyclic C2 symmetry.
 We restricted ourselves to chemical and geometric features to provide for our models. This included:
