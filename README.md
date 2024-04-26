@@ -62,7 +62,7 @@ Shifting our attention to the tabular data, we tried several regression based mo
 |Model|Train accuracy|Test accuracy|
 |---|:---:|:---:|
 |Baseline (Mode)| 75.92%| 76.15%|
-|Linear regression after PCA| 76.35%| 76.17%|
+|Linear regression after PCA| 76.35%| 76.14%|
 |Linear regression on cor. components| 76.35%| 76.17%|
 |Regression tree| 87.91%| 87.97%|
 |Regression tree without OC| 76.35%| 76.17%|
