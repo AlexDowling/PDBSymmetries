@@ -107,6 +107,7 @@ In addition, one could employ more advanced techniques (like those from topologi
 |____notebooks
 |    |____BoostAnalysis.ipynb					Notebook containing our GBDC classifier
 |    |____PointCloudAnalysis.ipynb    Notebook containing our KNN model
+|    |____PCATreeAnalysis.ipynb       Notebook containing our PCA and regression tree models
 
 |____proteins
 |    |____batch-1       Folder containing 50 protein .cif files
