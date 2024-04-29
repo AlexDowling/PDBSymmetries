@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 import math
 import pickle
 
-from rcsbsearchapi.search import TextQuery
-from rcsbsearchapi import rcsb_attributes as attrs
+#from rcsbsearchapi.search import TextQuery
+#from rcsbsearchapi import rcsb_attributes as attrs
 
 def is_capital(string, space=''):
     for s in string:
